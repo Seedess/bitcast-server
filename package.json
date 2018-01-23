@@ -1,0 +1,15 @@
+{
+  "name": "streamcaster",
+  "version": "1.0.0",
+  "description": "Cast streams to Chromecast/UPnP/DLNA enabled devices",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gabe@fijiwebdesign.com",
+  "license": "ISC",
+  "dependencies": {
+    "upnpserver": "^3.0"
+  }
+}
