@@ -7,7 +7,7 @@ if (!path) {
 
 const server = new Server({ 
     hostname: 'localhost',
-    httpPort: 8888,
+    httpPort: process.env.PORT || 8088,
     name: 'BitCast mount:' + path,
     modelName: 'BitCast-1.0',
     log: true,
@@ -16,9 +16,9 @@ const server = new Server({
     ssdpLogLevel: 'TRACE'
  }, [
   { path, mountPoint: '/Media', type: 'directory'},
-  //{ path: '/Users/chandra/Downloads', mountPoint: '/Movies', type: 'movie'},
-  //{ path: '/Users/chandra/Downloads', mountPoint: '/Music', type: 'music'},
-  //{ path: '/Users/chandra/Music/iTunes/iTunes Media', mountPoint: '/iTunes'}
+  //{ path: '/Users/gabe/Downloads', mountPoint: '/Movies', type: 'movie'},
+  //{ path: '/Users/gabe/Downloads', mountPoint: '/Music', type: 'music'},
+  //{ path: '/Users/gabe/Music/iTunes/iTunes Media', mountPoint: '/iTunes'}
 ]);
 
 server.start();
